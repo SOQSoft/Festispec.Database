@@ -3,10 +3,13 @@
 
 ## Installation
 
- **1.**  Clone de repository 
- **2.**  Open Command promp 
- **3.**  `cd` naar de map met het project 
-**4.** Voer de volge
+**1.**  Clone de repository 
+
+**2.**  Open Command promp 
+
+**3.**  `cd` naar de map met het project 
+
+**4.** Voer de volgende lijnen uit
 ```cmd
 #Restore npm packages
 dotnet restore
