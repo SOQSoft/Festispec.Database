@@ -50,4 +50,9 @@ dotnet test
 
 
 ## Deployment
-Voor deze repository is geen deployment nodig deze wordt mee gedeployed met ![Festispec.Api](https://github.com/SOQSoft/Festispec.Api)
+Voer de volgende commando uit in cmd, bash om de laatste versie op de halen binnen de andere reposiories
+```
+git submodule update --recursive --remote
+```
+
+Voor deze repository is geen deployment nodig deze wordt mee gedeployed met [Festispec.Api](https://github.com/SOQSoft/Festispec.Api)
