@@ -18,7 +18,20 @@ dotnet restore
 dotnet ef database update
 ```
 
+
 ## Development
+Nadat je aanpassingen aan de database models hebt gemaakt moet je migraties toevoegen om het daadwerkelijk te laten werken. 
+Doe dit door de volgende commando uit te voeren: 
+```cmd
+#Restore npm packages
+dotnet restore
+
+# Add migration
+dotnet ef migrations add #migrationname
+```
+#migrationname = Migratienaam bijvoorbeeld `Added users Name`
+
+
 
 
 ## Testing
