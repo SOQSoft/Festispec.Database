@@ -3,9 +3,9 @@
 
 ## Installation
 
-**1.**  Clone de repository 
-**2.**  Open Command promp 
-**3.**  `cd` naar de map met het project 
+ **1.**  Clone de repository 
+ **2.**  Open Command promp 
+ **3.**  `cd` naar de map met het project 
 **4.** Voer de volge
 ```cmd
 #Restore npm packages
@@ -47,17 +47,4 @@ dotnet test
 
 
 ## Deployment
-### Deployment method
-Deployments gaan automatish doormiddel van intergratie van azure devops, zodra er iets naar de develop branch wordt gepushed wordt deze automatish op de test server gedeployed. 
-Wil je het deployen naar de master server push dan de code van develop naar  ``Release`` aan in github, 
-
-
-1.  Open Github en navigeer naar de repository.
-    
-2.  Under your repository name, click **Releases**.
-![Releases tab](https://help.github.com/assets/images/help/releases/release-link.png =818x170)
-    
-3.  klik op **Draft a new release**.
-![Releases tab](https://help.github.com/assets/images/help/releases/draft_release_button.png =371x171)
-
-4.  ![Releases tagged version](https://github.com/SOQSoft/Technisch-Ontwerp/wiki/Versiebeheer =360x49) Schrijf het versie nummer neer van welke versie het is gebruik hierbij de benaming van het het  [versie beheer](https://git-scm.com/book/en/Git-Basics-Tagging) van het technish ontwerp.
+Voor deze repository is geen deployment nodig deze wordt mee gedeployed met ![Festispec.Api](https://github.com/SOQSoft/Festispec.Api)
