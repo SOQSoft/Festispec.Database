@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Festispec.Database.Models;
 using Festispec.Domain;
-using Festispec.Domain.src;
+//using Festispec.Domain.src;
 using Microsoft.EntityFrameworkCore;
 
 namespace Festispec.Database
@@ -19,7 +20,7 @@ namespace Festispec.Database
 
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer(@"Server=.;Database=Festispec;Trusted_Connection=True;");
+			optionsBuilder.UseSqlServer(@"Server=.;Database=Festispec.db;Trusted_Connection=True;");
 		}
 	}
 }
