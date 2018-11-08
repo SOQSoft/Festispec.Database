@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Festispec.Database.Migrations
 {
     [DbContext(typeof(FestispecContext))]
-    [Migration("20181107145923_Forms")]
-    partial class Forms
+    [Migration("20181108135457_Initialize")]
+    partial class Initialize
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace Festispec.Database.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Festispec.Domain.src.Form", b =>
+            modelBuilder.Entity("Festispec.Database.Models.Form", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,7 +38,7 @@ namespace Festispec.Database.Migrations
                     b.ToTable("Forms");
                 });
 
-            modelBuilder.Entity("Festispec.Domain.src.Question", b =>
+            modelBuilder.Entity("Festispec.Database.Models.Question", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -59,7 +59,7 @@ namespace Festispec.Database.Migrations
                     b.ToTable("Question");
                 });
 
-            modelBuilder.Entity("Festispec.Domain.src.QuestionItem", b =>
+            modelBuilder.Entity("Festispec.Database.Models.QuestionItem", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -76,17 +76,17 @@ namespace Festispec.Database.Migrations
                     b.ToTable("QuestionItem");
                 });
 
-            modelBuilder.Entity("Festispec.Domain.src.Question", b =>
+            modelBuilder.Entity("Festispec.Database.Models.Question", b =>
                 {
-                    b.HasOne("Festispec.Domain.src.Form")
-                        .WithMany("Questions")
+                    b.HasOne("Festispec.Database.Models.Form", "Form")
+                        .WithMany("Question")
                         .HasForeignKey("FormId");
                 });
 
-            modelBuilder.Entity("Festispec.Domain.src.QuestionItem", b =>
+            modelBuilder.Entity("Festispec.Database.Models.QuestionItem", b =>
                 {
-                    b.HasOne("Festispec.Domain.src.Question")
-                        .WithMany("QuestionItems")
+                    b.HasOne("Festispec.Database.Models.Question", "Question")
+                        .WithMany("QuestionItem")
                         .HasForeignKey("QuestionId");
                 });
 #pragma warning restore 612, 618
